@@ -690,8 +690,8 @@ project/
                 key={topic.id}
                 onClick={() => setActiveTab(topic.id)}
                 className={`px-6 py-3 rounded-lg font-semibold transition-all flex items-center gap-2 ${activeTab === topic.id
-                    ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-md"
-                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                  ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-md"
+                  : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                   }`}
               >
                 <span className="text-xl">{topic.icon}</span>
