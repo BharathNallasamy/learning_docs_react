@@ -123,8 +123,8 @@ export const headerData: HeaderData = {
           topics: [
             { id: 1, name: "React.js", href: "/courses/react" },
             { id: 2, name: "Angular", href: "/courses/angular" },
-            { id: 5, name: "Next.js", href: "/technology/frontend/nextjs" },
-            { id: 6, name: "TypeScript", href: "/technology/frontend/typescript" },
+            { id: 5, name: "Next.js", href: "/courses/nextjs" },
+            { id: 6, name: "TypeScript", href: "/courses/typescript" },
           ],
         },
         {
@@ -136,10 +136,7 @@ export const headerData: HeaderData = {
           topics: [
             { id: 1, name: "Node.js", href: "/courses/nodejs" },
             { id: 2, name: "Express.js", href: "/courses/expressjs" },
-            { id: 3, name: "Java Spring", href: "/courses/java" },
-            { id: 4, name: "Python Django", href: "/technology/backend/django" },
-            { id: 5, name: "PHP Laravel", href: "/technology/backend/laravel" },
-            { id: 6, name: "Ruby on Rails", href: "/technology/backend/rails" },
+            { id: 3, name: "Java Spring", href: "/courses/java-spring" },
           ],
         },
         {
@@ -149,12 +146,10 @@ export const headerData: HeaderData = {
           icon: "🗄️",
           hasNestedDropdown: true,
           topics: [
-            { id: 1, name: "MySQL", href: "/technology/database/mysql" },
-            { id: 2, name: "PostgreSQL", href: "/technology/database/postgresql" },
+            { id: 1, name: "MySQL", href: "/courses/mysql" },
+            { id: 2, name: "PostgreSQL", href: "/courses/postgresql" },
             { id: 3, name: "MongoDB", href: "/courses/mongodb" },
-            { id: 4, name: "Redis", href: "/technology/database/redis" },
-            { id: 5, name: "Firebase", href: "/technology/database/firebase" },
-            { id: 6, name: "SQL Basics", href: "/technology/database/sql" },
+            { id: 6, name: "SQL Basics", href: "/courses/sql-basics" },
           ],
         },
         {
@@ -181,25 +176,6 @@ export const headerData: HeaderData = {
           topics: [
             { id: 1, name: "React Native", href: "/technology/mobile/react-native" },
             { id: 2, name: "Flutter", href: "/technology/mobile/flutter" },
-            { id: 3, name: "iOS Swift", href: "/technology/mobile/ios-swift" },
-            { id: 4, name: "Android Kotlin", href: "/technology/mobile/android-kotlin" },
-            { id: 5, name: "Ionic", href: "/technology/mobile/ionic" },
-            { id: 6, name: "Xamarin", href: "/technology/mobile/xamarin" },
-          ],
-        },
-        {
-          id: 6,
-          label: "AI/ML",
-          href: "/technology/ai-ml",
-          icon: "🤖",
-          hasNestedDropdown: true,
-          topics: [
-            { id: 1, name: "Python ML", href: "/technology/ai-ml/python-ml" },
-            { id: 2, name: "TensorFlow", href: "/technology/ai-ml/tensorflow" },
-            { id: 3, name: "PyTorch", href: "/technology/ai-ml/pytorch" },
-            { id: 4, name: "Natural Language Processing", href: "/technology/ai-ml/nlp" },
-            { id: 5, name: "Computer Vision", href: "/technology/ai-ml/computer-vision" },
-            { id: 6, name: "Deep Learning", href: "/technology/ai-ml/deep-learning" },
           ],
         },
       ],
