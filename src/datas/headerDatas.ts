@@ -134,8 +134,8 @@ export const headerData: HeaderData = {
           icon: "⚙️",
           hasNestedDropdown: true,
           topics: [
-            { id: 1, name: "Node.js", href: "/technology/backend/nodejs" },
-            { id: 2, name: "Express.js", href: "/technology/backend/express" },
+            { id: 1, name: "Node.js", href: "/courses/nodejs" },
+            { id: 2, name: "Express.js", href: "/courses/expressjs" },
             { id: 3, name: "Java Spring", href: "/courses/java" },
             { id: 4, name: "Python Django", href: "/technology/backend/django" },
             { id: 5, name: "PHP Laravel", href: "/technology/backend/laravel" },
@@ -151,7 +151,7 @@ export const headerData: HeaderData = {
           topics: [
             { id: 1, name: "MySQL", href: "/technology/database/mysql" },
             { id: 2, name: "PostgreSQL", href: "/technology/database/postgresql" },
-            { id: 3, name: "MongoDB", href: "/technology/database/mongodb" },
+            { id: 3, name: "MongoDB", href: "/courses/mongodb" },
             { id: 4, name: "Redis", href: "/technology/database/redis" },
             { id: 5, name: "Firebase", href: "/technology/database/firebase" },
             { id: 6, name: "SQL Basics", href: "/technology/database/sql" },

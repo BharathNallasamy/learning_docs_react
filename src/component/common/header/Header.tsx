@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { headerData } from "../../../datas/headerDatas";
 import { useAuth } from "../../../context/AuthContext";
 
@@ -58,12 +58,12 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a
-              href={headerData.logo.href}
+            <Link
+              to={headerData.logo.href}
               className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hover:from-blue-700 hover:to-purple-700 transition-all"
             >
               {headerData.logo.text}
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
@@ -137,28 +137,28 @@ const Header = () => {
                                       </p>
                                     </div>
                                     {item.topics.map((topic) => (
-                                      <a
+                                      <Link
                                         key={topic.id}
-                                        href={topic.href}
+                                        to={topic.href}
                                         className="block px-4 py-2 text-sm text-gray-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:text-blue-600 transition-all hover:pl-5"
                                       >
                                         <span className="flex items-center gap-2">
                                           <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
                                           {topic.name}
                                         </span>
-                                      </a>
+                                      </Link>
                                     ))}
                                   </div>
                                 )}
                               </>
                             ) : (
-                              <a
-                                href={item.href}
+                              <Link
+                                to={item.href}
                                 className="flex items-center gap-2 px-4 py-2.5 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:text-blue-600 transition-all"
                               >
                                 <span className="text-lg">{item.icon}</span>
                                 <span className="font-medium">{item.label}</span>
-                              </a>
+                              </Link>
                             )}
                           </div>
                         ))}
@@ -517,25 +517,25 @@ const Header = () => {
                                   {activeNestedDropdown === item.id && item.topics && (
                                     <div className="pl-8 mt-1 space-y-1 border-l-2 border-blue-200 ml-4">
                                       {item.topics.map((topic) => (
-                                        <a
+                                        <Link
                                           key={topic.id}
-                                          href={topic.href}
+                                          to={topic.href}
                                           className="block px-3 py-2 text-xs text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-all"
                                         >
                                           {topic.name}
-                                        </a>
+                                        </Link>
                                       ))}
                                     </div>
                                   )}
                                 </>
                               ) : (
-                                <a
-                                  href={item.href}
+                                <Link
+                                  to={item.href}
                                   className="flex items-center gap-2 px-4 py-2 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-all"
                                 >
                                   <span>{item.icon}</span>
                                   <span className="font-medium">{item.label}</span>
-                                </a>
+                                </Link>
                               )}
                             </div>
                           ))}
@@ -543,12 +543,12 @@ const Header = () => {
                       )}
                     </>
                   ) : (
-                    <a
-                      href={navItem.href}
+                    <Link
+                      to={navItem.href}
                       className="block px-4 py-2.5 text-sm font-semibold text-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:text-blue-600 rounded-lg transition-all"
                     >
                       {navItem.label}
-                    </a>
+                    </Link>
                   )}
                 </div>
               ))}

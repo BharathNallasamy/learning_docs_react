@@ -9,6 +9,13 @@ import Html from './component/pages/Html'
 import ComputersWeb from './component/pages/ComputersWeb'
 import Css from './component/pages/Css'
 import Javascript from './component/pages/Javascript'
+import ReactCourse from './component/pages/React'
+import Angular from './component/pages/Angular'
+import Java from './component/pages/Java'
+// Backend courses
+import NodeJs from './component/pages/backend/NodeJs'
+import ExpressJs from './component/pages/backend/ExpressJs'
+import MongoDB from './component/pages/backend/MongoDB'
 
 function App() {
   return (
@@ -70,6 +77,16 @@ function App() {
                     <Route path="/courses/js/oop" element={<Javascript />} />
                     <Route path="/courses/js/modules" element={<Javascript />} />
                     <Route path="/courses/js/testing" element={<Javascript />} />
+
+                    {/* Frontend Technology Routes */}
+                    <Route path="/courses/react" element={<ReactCourse />} />
+                    <Route path="/courses/angular" element={<Angular />} />
+                    <Route path="/courses/java" element={<Java />} />
+
+                    {/* Backend Technology Routes */}
+                    <Route path="/courses/nodejs" element={<NodeJs />} />
+                    <Route path="/courses/expressjs" element={<ExpressJs />} />
+                    <Route path="/courses/mongodb" element={<MongoDB />} />
 
                     {/* Fallback route */}
                     <Route path="*" element={<Home />} />
