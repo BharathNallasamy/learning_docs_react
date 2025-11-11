@@ -1,0 +1,87 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import './App.css'
+import { AuthProvider } from './context/AuthContext'
+import ProtectedRoute from './component/common/ProtectedRoute'
+import Header from './component/common/header/Header'
+import Login from './loginCredentials/Login'
+import Home from './component/pages/Home'
+import Html from './component/pages/Html'
+import ComputersWeb from './component/pages/ComputersWeb'
+import Css from './component/pages/Css'
+import Javascript from './component/pages/Javascript'
+
+function App() {
+  return (
+    <AuthProvider>
+      <Router>
+        <Routes>
+          {/* Public Route - Login */}
+          <Route path="/login" element={<Login />} />
+
+          {/* Protected Routes */}
+          <Route
+            path="/*"
+            element={
+              <ProtectedRoute>
+                <div className="min-h-screen">
+                  {/* Header */}
+                  <Header />
+
+                  {/* Routes */}
+                  <Routes>
+                    {/* Home Page */}
+                    <Route path="/" element={<Home />} />
+
+                    {/* Basics of Web Routes */}
+                    <Route path="/courses/computers-web" element={<ComputersWeb />} />
+                    <Route path="/courses/html" element={<Html />} />
+
+                    {/* Individual topic routes */}
+                    <Route path="/courses/computers-web/program" element={<ComputersWeb />} />
+                    <Route path="/courses/computers-web/internet" element={<ComputersWeb />} />
+                    <Route path="/courses/computers-web/client-server" element={<ComputersWeb />} />
+                    <Route path="/courses/computers-web/website" element={<ComputersWeb />} />
+
+                    <Route path="/courses/html/basics" element={<Html />} />
+                    <Route path="/courses/html/forms" element={<Html />} />
+                    <Route path="/courses/html/html5" element={<Html />} />
+                    <Route path="/courses/html/semantic" element={<Html />} />
+                    <Route path="/courses/html/accessibility" element={<Html />} />
+
+                    {/* CSS and JavaScript Routes */}
+                    <Route path="/courses/css" element={<Css />} />
+                    <Route path="/courses/javascript" element={<Javascript />} />
+
+                    {/* CSS topic routes */}
+                    <Route path="/courses/css/basics" element={<Css />} />
+                    <Route path="/courses/css/flexbox" element={<Css />} />
+                    <Route path="/courses/css/grid" element={<Css />} />
+                    <Route path="/courses/css/animations" element={<Css />} />
+                    <Route path="/courses/css/responsive" element={<Css />} />
+                    <Route path="/courses/css/variables" element={<Css />} />
+                    <Route path="/courses/css/sass" element={<Css />} />
+
+                    {/* JavaScript topic routes */}
+                    <Route path="/courses/js/fundamentals" element={<Javascript />} />
+                    <Route path="/courses/js/es6" element={<Javascript />} />
+                    <Route path="/courses/js/dom" element={<Javascript />} />
+                    <Route path="/courses/js/async" element={<Javascript />} />
+                    <Route path="/courses/js/promises" element={<Javascript />} />
+                    <Route path="/courses/js/oop" element={<Javascript />} />
+                    <Route path="/courses/js/modules" element={<Javascript />} />
+                    <Route path="/courses/js/testing" element={<Javascript />} />
+
+                    {/* Fallback route */}
+                    <Route path="*" element={<Home />} />
+                  </Routes>
+                </div>
+              </ProtectedRoute>
+            }
+          />
+        </Routes>
+      </Router>
+    </AuthProvider>
+  )
+}
+
+export default App
